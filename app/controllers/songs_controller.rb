@@ -29,7 +29,7 @@ class SongsController < ApplicationController
       redirect_to artists_path, alert: "Artist not found"
     else
       binding.pry
-      @song = Song.new(artist_id: params[:artist_id])
+      @song = Song.new(title: params[:title], artist_id: params[:artist_id])
     end
   end
 
